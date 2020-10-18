@@ -17,7 +17,7 @@ As malware (Windows) usually depend on one of these components within their exec
 
 This tool is an alternative solution to using event tracing (ETW) to get AMSI events, which may be cumbersome and not easily integrable into automated pipelines (e.g. sandboxes).
 
-Once installed, the dumps are found at ```C:\amsi_tracer``` and have the following naming convention ```<epoch>_<processName>_<processId>_<threadId>_<counter>```
+Once installed, the dumps are found at ```C:\amsi_tracer``` and have the following naming convention ```<epoch>_<processName>_<processId>_<threadId>_<counter>.dmp```
 
 ## Installation
 **_AMSI is only available on Windows 10 / Server 2016 and above_**
@@ -46,10 +46,10 @@ Enable AMSI for all documents by setting the following registry key (Office 2016
 ```
 
 ## Examples
-WSHRAT: 
-Babax/Osno Stealer/Ransomware -> XLS -> Powershell -> .NET
+Here are some sample outputs:
+
+[WSHRAT - JScript](./Examples/wshrat_js_bf110a79e1751b7432b1505e860d3a2cbd702e16292420088b8b1b5c7c5a4256_js.7z)
+
+[Babax/Osno Stealer/Ransomware (XLS -> Powershell -> .NET)](./Examples/babax_osno_stealer_ransomware_xls_a945eae89740b354233e7dfb2157169c29d43cc08fc623a76b6fae3fba783e82.7z)
 
 Password: ```infected```
-
-
-Qakbot Downloader
