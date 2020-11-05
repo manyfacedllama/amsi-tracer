@@ -13,7 +13,7 @@ AMSI is (originally) intended for application & AV vendors to interact with one 
 * Windows Management Instrumentation (WMI)
 * ...
 
-As malware (Windows) usually depend on one of these components within their execution chain, especially early on (e.g. downloader/dropper via maldoc), we can leverage this tool while dynamically analyzing a malware to unearth obfsucated code execution, dump assemblies that are dynamically loaded, and more.
+As malware (Windows) usually depend on one of these components within their execution chain, especially early on (e.g. downloader/dropper via maldoc), we can leverage this tool while dynamically analyzing a malware to unearth obfuscated code execution, dump assemblies that are dynamically loaded, and more.
 
 This tool is an alternative solution to using event tracing (ETW) to get AMSI events, which may be cumbersome and not easily integrable into automated pipelines (e.g. sandboxes).
 
