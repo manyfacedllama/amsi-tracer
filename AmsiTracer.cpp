@@ -70,6 +70,7 @@ private:
 };
 
 class
+    // Register it as the top provider (top-down)
     DECLSPEC_UUID("00000000-0000-0000-0000-000000000000")
     AmsiTracer : public RuntimeClass<RuntimeClassFlags<ClassicCom>, IAntimalwareProvider, FtmBase>
 {
@@ -118,7 +119,7 @@ HRESULT AmsiTracer::Scan(_In_ IAmsiStream* stream, _Out_ AMSI_RESULT* result)
 {
     LONG requestNumber = InterlockedIncrement(&m_requestNumber);
 
-    int epoch = duration_cast<milliseconds>(
+    auto epoch = duration_cast<milliseconds>(
         system_clock::now().time_since_epoch()
         ).count();
     wchar_t processFilePath[MAX_PATH] = { 0 };
